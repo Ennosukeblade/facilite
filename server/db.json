@@ -1,0 +1,72 @@
+{ 
+  "admins":[
+    {
+      "username":"Joker",
+      "password":"mou123"
+    }
+  ],
+  "intervals": [
+    {
+      "value": 115,
+      "id": "min"
+    },
+    {
+      "value": 1000,
+      "id": "mid"
+    },
+    {
+      "id": "max",
+      "value": 1899
+    }
+  ],
+  "percents": [
+    {
+      "value": 1.05,
+      "id": "x3m1"
+    },
+    {
+      "value": 1.1,
+      "id": "x6m1"
+    },
+    {
+      "value": 1.15,
+      "id": "x9m1"
+    },
+    {
+      "value": 1.2,
+      "id": "x12m1"
+    },
+    {
+      "value": 1.04,
+      "id": "x3m2"
+    },
+    {
+      "value": 1.08,
+      "id": "x6m2"
+    },
+    {
+      "value": 1.12,
+      "id": "x9m2"
+    },
+    {
+      "value": 1.16,
+      "id": "x12m2"
+    },
+    {
+      "value": 1.03,
+      "id": "x3m3"
+    },
+    {
+      "value": 1.06,
+      "id": "x6m3"
+    },
+    {
+      "value": 1.09,
+      "id": "x9m3"
+    },
+    {
+      "value": 1.12,
+      "id": "x12m3"
+    }
+  ]
+}
