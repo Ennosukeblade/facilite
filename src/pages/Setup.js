@@ -5,6 +5,7 @@ import Interval from "../components/Interval";
 import LoginForm from "../components/LoginForm";
 
 export default function Setup() {
+  
   const [values, setValues] = useState([]);
   const [intervals, setIntervals] = useState([]);
 
@@ -17,7 +18,6 @@ export default function Setup() {
     loadPercents();
     loadIntervals();
     loadAdmins();
-    console.log("render!!!");
   }, []);
 
   const loadPercents = () => getValues().then((v) => setValues(v.data));
@@ -25,12 +25,10 @@ export default function Setup() {
   const loadAdmins = () => getAdmins().then((v) => setAdmins(v.data));
 
   const Login = (details) => {
- 
     if (
       details.name === admins[0].username &&
       details.pass === admins[0].password
     ) {
-  
       setUser(details);
     } else {
       console.log("Details do not match!");
@@ -42,7 +40,6 @@ export default function Setup() {
     setUser({});
   };
 
-  console.log(values);
   const fv1 = values?.filter((x) => x?.id === "x3m1");
   const fv2 = values?.filter((x) => x?.id === "x6m1");
   const fv3 = values?.filter((x) => x?.id === "x9m1");
@@ -55,10 +52,10 @@ export default function Setup() {
   const fv10 = values?.filter((x) => x?.id === "x6m3");
   const fv11 = values?.filter((x) => x?.id === "x9m3");
   const fv12 = values?.filter((x) => x?.id === "x12m3");
-
   const min = intervals?.filter((x) => x?.id === "min");
   const mid = intervals?.filter((x) => x?.id === "mid");
   const max = intervals?.filter((x) => x?.id === "max");
+
   return (
     <div className="container">
       {user.username !== "" ? (
@@ -74,19 +71,16 @@ export default function Setup() {
                 ide={fv1[0]?.id}
                 mlabel="3 mois"
               />
-
               <Percent
                 percent={fv2[0]?.value}
                 ide={fv2[0]?.id}
                 mlabel="6 mois"
               />
-
               <Percent
                 percent={fv3[0]?.value}
                 ide={fv3[0]?.id}
                 mlabel="9 mois"
               />
-
               <Percent
                 percent={fv4[0]?.value}
                 ide={fv4[0]?.id}
@@ -94,7 +88,6 @@ export default function Setup() {
               />
             </form>
           </div>
-
           <div className="mt-3 border border-2 rounded-3 p-4">
             <form className="row align-items-center">
               <Interval interval={mid[0]?.value} id={mid[0]?.id} iLabel="De" />
@@ -137,19 +130,16 @@ export default function Setup() {
                 ide={fv9[0]?.id}
                 mlabel="3 mois"
               />
-
               <Percent
                 percent={fv10[0]?.value}
                 ide={fv10[0]?.id}
                 mlabel="6 mois"
               />
-
               <Percent
                 percent={fv11[0]?.value}
                 ide={fv11[0]?.id}
                 mlabel="9 mois"
               />
-
               <Percent
                 percent={fv12[0]?.value}
                 ide={fv12[0]?.id}
