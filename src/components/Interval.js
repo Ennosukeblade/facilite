@@ -1,5 +1,4 @@
 import React from "react";
-//import { Form } from "react-bootstrap";
 import { updateInterval } from "../services/api";
 
 export default function Interval({ interval, id, iLabel }) {

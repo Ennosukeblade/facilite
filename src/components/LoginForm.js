@@ -5,26 +5,8 @@ export default function LoginForm({ Login, error }) {
   const handleChange = e => {
     e.preventDefault();
     Login(details)
-    //setDetails(prevUser => ({...prevUser, [e.target.name]: e.target.value}))
   }
   return (
-/*     <div classNameName="login-wrapper">
-      <h1>Authentification</h1>
-      <form onSubmit={handleChange}>
-        <label>
-          <p>Utilisateur</p>
-          <input type="text" name="username" value={details.name} onChange={e => setDetails({...details, name: e.target.value})} />
-        </label>
-        <label>
-          <p>Mot de passe</p>
-          <input type="password" name="password" value={details.pass} onChange={e => setDetails({...details, pass: e.target.value})} />
-        </label>
-        <div>
-          <button type="submit">S'authentifier</button>
-        </div>
-      </form>
-    </div> */
-
 
 <div className="card mt-3 container-sm">
 <article className="card-body">
